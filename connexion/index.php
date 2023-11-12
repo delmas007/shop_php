@@ -1,19 +1,19 @@
 <?php
-// Initialisez la session
+// Includez votre fichier de configuration de la base de données
 global $mysqli;
+include 'config.php';
+
+//// Initialisez la session
 //session_start();
 //
 //// Vérifiez si l'utilisateur est déjà connecté, si oui, redirigez-le vers la page d'accueil
 //if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-//    header("location: ../index.php");
+//    header("location: welcome.php");
 //    exit;
 //}
 
 // Vérifiez si le formulaire de connexion a été soumis
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    // Includez votre fichier de configuration de la base de données
-    include 'config.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Vérifiez les informations d'identification de l'utilisateur
     $username = $_POST["username"];
@@ -21,49 +21,52 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $sql = "SELECT id_user, username, mot_de_passe FROM utilisateur WHERE username = ?";
 
-    if($stmt = $mysqli->prepare($sql)){
+    if ($stmt = $mysqli->prepare($sql)) {
         $stmt->bind_param("s", $param_username);
 
         $param_username = $username;
 
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             $stmt->store_result();
 
             // Vérifiez si l'utilisateur existe, si oui, vérifiez le mot de passe
-            if($stmt->num_rows == 1){
+            if ($stmt->num_rows == 1) {
                 $stmt->bind_result($id, $username, $hashed_password);
-                if($stmt->fetch()){
-                    if(password_verify($password, $hashed_password)){
+                if ($stmt->fetch()) {
+                    if (password_verify($password, $hashed_password)) {
                         // Le mot de passe est correct, démarrer une nouvelle session
-                        session_start();
-
-                        // Stockez les données dans des variables de session
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
                         $_SESSION["username"] = $username;
 
                         // Redirigez l'utilisateur vers la page de bienvenue
                         header("location: welcome.php");
-                    } else{
+                    } else {
                         // Le mot de passe n'est pas valide
                         $error = "Le mot de passe que vous avez entré n'est pas valide.";
+
+                        // Afficher une boîte de dialogue pop-up avec l'erreur
+                        echo '<script>alert("' . $error . '");</script>';
                     }
                 }
-            } else{
+            } else {
                 // L'utilisateur n'existe pas
                 $error = "Aucun compte trouvé avec ce nom d'utilisateur.";
+
+                // Afficher une boîte de dialogue pop-up avec l'erreur
+                echo '<script>alert("' . $error . '");</script>';
             }
-        } else{
+        } else {
             echo "Oops! Quelque chose s'est mal passé. Veuillez réessayer plus tard.";
         }
     }
 
     // Fermez l'instruction
     $stmt->close();
-
-    // Fermez la connexion
-    $mysqli->close();
 }
+
+// Fermez la connexion
+$mysqli->close();
 ?>
 
 <!DOCTYPE html>
@@ -89,6 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="input-box button">
             <input type="submit" value="Connexion">
         </div>
+
         <div class="text">
             <h3>Vous n'avez pas de compte? <a href="#">Créer un compte</a></h3>
         </div>
