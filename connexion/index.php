@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["username"] = $username;
 
                         // Redirigez l'utilisateur vers la page de bienvenue
-                        header("location: welcome.php");
+                        header("location: ../index.php");
                     } else {
                         // Le mot de passe n'est pas valide
                         $error = "Le mot de passe que vous avez entré n'est pas valide.";

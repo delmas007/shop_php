@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -96,18 +99,23 @@
 
                   </ul>
                   <div class="user_option">
-                      <a href="connexion/index.php">
-                          <i class="fa fa-user" aria-hidden="true"></i>
-                          <span>
-                connexion
-              </span>
-                      </a>
-                      <a href="inscription/index.php">
-                          <i class="fa fa-user" aria-hidden="true"></i>
-                          <span>
-                inscription
-              </span>
-                      </a>
+                      <?php
+                      if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+                          echo '<a href="deconnexion.php">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Déconnexion</span>
+              </a>';
+                      } else {
+                          echo '<a href="connexion/index.php">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>Connexion</span>
+              </a>';
+                          echo '<a href="inscription/index.php">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>Inscription</span>
+              </a>';
+                      }
+                      ?>
                       <a href="">
                           <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                       </a>

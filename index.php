@@ -119,8 +119,6 @@ session_start();
               </a>';
               }
               ?>
-
-
               <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$username', '$nom', '$prenom', '$adresse', '$mot_de_passe', '$email', '$num_telephone')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Inscription réussie!";
+        header("location: ../connexion/index.php");
     } else {
         echo "Erreur lors de l'inscription: " . $conn->error;
     }
