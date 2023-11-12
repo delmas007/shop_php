@@ -1,30 +1,30 @@
 <?php
-// Check if the form is submitted
+// Vérifiez si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Include your database connection file or configure it here
+    // Inclut votre fichier de connexion à la base de données ou configurez-le ici
     $servername = "127.0.0.1";
     $username = "root";
     $password = "";
     $dbname = "vente";
 
-    // Create a connection
+    // Crée une connexion
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check the connection
+    // Vérifiez la connexion
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Get form data
+    // Récupère les données du formulaire
     $username = $_POST["username"];
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
     $adresse = $_POST["adresse"];
-    $mot_de_passe = password_hash($_POST["mot_de_passe"], PASSWORD_DEFAULT); // Hash the password
+    $mot_de_passe = password_hash($_POST["mot_de_passe"], PASSWORD_DEFAULT); // Hachez le mot de passe
     $email = $_POST["email"];
     $num_telephone = $_POST["num_telephone"];
 
-    // SQL query to insert data into the database
+    // Requête SQL pour insérer des données dans la base de données
     $sql = "INSERT INTO utilisateur (username, nom, prenom, adresse, mot_de_passe, email, num_telephone) 
             VALUES ('$username', '$nom', '$prenom', '$adresse', '$mot_de_passe', '$email', '$num_telephone')";
 
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erreur lors de l'inscription: " . $conn->error;
     }
 
-    // Close the database connection
+    // Ferme la connexion à la base de données
     $conn->close();
 }
 ?>

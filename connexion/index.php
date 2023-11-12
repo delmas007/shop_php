@@ -1,12 +1,13 @@
 <?php
 // Initialisez la session
-session_start();
-
-// Vérifiez si l'utilisateur est déjà connecté, si oui, redirigez-le vers la page d'accueil
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
-    exit;
-}
+global $mysqli;
+//session_start();
+//
+//// Vérifiez si l'utilisateur est déjà connecté, si oui, redirigez-le vers la page d'accueil
+//if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+//    header("location: ../index.php");
+//    exit;
+//}
 
 // Vérifiez si le formulaire de connexion a été soumis
 if($_SERVER["REQUEST_METHOD"] == "POST"){

@@ -13,11 +13,5 @@ if ($mysqli->connect_error) {
 }
 ?>
 
-<?php
-include 'config.php';
-
-// rest of your login page code
-?>
-
 
 
