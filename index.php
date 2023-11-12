@@ -104,24 +104,24 @@ session_start();
           <div class="user_option">
               <?php
               if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-                  echo '';
-              }else{
+                  echo '<a href="deconnexion.php">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Déconnexion</span>
+              </a>';
+              } else {
                   echo '<a href="connexion/index.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <span>
-                    Connexion
-                </span>
+                <span>Connexion</span>
               </a>';
                   echo '<a href="inscription/index.php">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <span>
-                inscription
-              </span>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>Inscription</span>
               </a>';
               }
               ?>
 
-            <a href="">
+
+              <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
             <form class="form-inline ">
