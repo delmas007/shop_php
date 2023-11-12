@@ -98,12 +98,18 @@
             
           </ul>
           <div class="user_option">
-            <a href="">
+            <a href="connexion/index.php">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span>
-                Login
+                connexion
               </span>
             </a>
+              <a href="inscription/index.php">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                inscription
+              </span>
+              </a>
             <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
