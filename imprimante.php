@@ -154,7 +154,6 @@ session_start();
                 Imprimante
                 </h6>
                 <h6>
-                
                   <span>
                     130,000 FCFA
                   </span>
@@ -168,8 +167,9 @@ session_start();
             </a>
           </div>
         </div>
-        
-        <div class="col-sm-6 col-md-4 col-lg-3">
+
+
+              <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
             <a href="">
               <div class="img-box">

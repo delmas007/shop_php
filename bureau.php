@@ -165,6 +165,11 @@ session_start();
                   New
                 </span>
               </div>
+                <!-- Ajoutez ceci à l'endroit où vous souhaitez afficher le bouton d'achat -->
+                <div class="buy-button" data-product-id="1" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Ajouter au panier</button>
+                </div>
+
             </a>
           </div>
         </div>
@@ -448,6 +453,33 @@ session_start();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script src="js/custom.js"></script>
+  <!-- Ajoutez ce script à la fin de votre page HTML ou dans l'entête -->
+  <script>
+      function addToCart(button) {
+          // Récupérer les informations du produit
+          var productId = button.parentElement.getAttribute('data-product-id');
+          var productType = button.parentElement.getAttribute('data-product-type');
+
+          // Appeler la fonction PHP pour enregistrer l'achat
+          addToCartPHP(productId, productType);
+      }
+
+      function addToCartPHP(productId, productType) {
+          // Utilisez AJAX pour appeler un script PHP qui enregistre l'achat
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'add_to_cart.php?product_id=' + productId + '&product_type=' + productType, true);
+
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                  // Gérer la réponse du serveur si nécessaire
+                  console.log(xhr.responseText);
+              }
+          }
+
+          xhr.send();
+      }
+  </script>
+
 
 </body>
 
