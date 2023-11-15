@@ -166,8 +166,8 @@ session_start();
                 </span>
               </div>
                 <!-- Ajoutez ceci à l'endroit où vous souhaitez afficher le bouton d'achat -->
-                <div class="buy-button" data-product-id="1" data-product-type="bureau">
-                    <button onclick="addToCart(this)">Ajouter au panier</button>
+                <div class="buy-button" data-product-id="17" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
                 </div>
 
             </a>
@@ -196,6 +196,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="18" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
         </div>
@@ -221,6 +224,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="19" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
         </div>
@@ -246,6 +252,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="20" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
         </div>
@@ -271,6 +280,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="21" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
         </div>
@@ -296,6 +308,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="22" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
         </div>
@@ -321,6 +336,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="23" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
         </div>
@@ -346,6 +364,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="31" data-product-type="bureau">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
       </div>
