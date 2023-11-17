@@ -145,7 +145,6 @@ session_start();
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Clavier/8.jpg" alt="">
               </div>
@@ -168,13 +167,11 @@ session_start();
                 <div class="buy-button" data-product-id="32" data-product-type="Clavier">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Clavier/7.jpg" alt="">
               </div>
@@ -197,12 +194,10 @@ session_start();
                 <div class="buy-button" data-product-id="33" data-product-type="Clavier">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Clavier/6.jpg" alt="">
               </div>
@@ -225,12 +220,10 @@ session_start();
                 <div class="buy-button" data-product-id="34" data-product-type="Clavier">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Clavier/5.jpg" alt="">
               </div>
@@ -250,7 +243,6 @@ session_start();
                   New
                 </span>
               </div>
-            </a>
               <div class="buy-button" data-product-id="35" data-product-type="Clavier">
                   <button onclick="addToCart(this)">Commander</button>
               </div>
@@ -258,7 +250,6 @@ session_start();
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Clavier/4.jpg" alt="">
               </div>
@@ -281,12 +272,10 @@ session_start();
                 <div class="buy-button" data-product-id="36" data-product-type="Clavier">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Clavier/3.jpg" alt="">
               </div>
@@ -309,12 +298,10 @@ session_start();
                 <div class="buy-button" data-product-id="37" data-product-type="Clavier">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Clavier/2.jpg" alt="">
               </div>
@@ -337,12 +324,10 @@ session_start();
                 <div class="buy-button" data-product-id="38" data-product-type="Clavier">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
               <div class="img-box">
                 <img src="Clavier/1.jpg" alt="">
               </div>
@@ -365,7 +350,6 @@ session_start();
                 <div class="buy-button" data-product-id="39" data-product-type="Clavier">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
