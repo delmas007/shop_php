@@ -90,7 +90,6 @@ session_start();
                               Imprimante
                           </a>
                       </li>
-                      </li>
                       <li class="nav-item">
                           <a class="nav-link" href="temoignage.php">
                               Temoignage
@@ -145,7 +144,6 @@ session_start();
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="bureau/8.jpg" alt="">
               </div>
@@ -169,14 +167,11 @@ session_start();
                 <div class="buy-button" data-product-id="17" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-
-            </a>
           </div>
         </div>
         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="bureau/7.jpg" alt="">
               </div>
@@ -199,12 +194,10 @@ session_start();
                 <div class="buy-button" data-product-id="18" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="bureau/6.jpg" alt="">
               </div>
@@ -227,12 +220,10 @@ session_start();
                 <div class="buy-button" data-product-id="19" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="bureau/5.jpeg" alt="">
               </div>
@@ -255,12 +246,10 @@ session_start();
                 <div class="buy-button" data-product-id="20" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="bureau/4.jpg" alt="">
               </div>
@@ -283,12 +272,10 @@ session_start();
                 <div class="buy-button" data-product-id="21" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="bureau/3.jpg" alt="">
               </div>
@@ -311,12 +298,10 @@ session_start();
                 <div class="buy-button" data-product-id="22" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="bureau/2.jpg" alt="">
               </div>
@@ -339,12 +324,10 @@ session_start();
                 <div class="buy-button" data-product-id="23" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
               <div class="img-box">
                 <img src="bureau/1.jpg" alt="">
               </div>
@@ -367,7 +350,6 @@ session_start();
                 <div class="buy-button" data-product-id="31" data-product-type="bureau">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
@@ -385,7 +367,6 @@ session_start();
   <section class="info_section  layout_padding2-top">
     <div class="social_container">
       <div class="social_box">
-        <a href="">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
         <a href="">
