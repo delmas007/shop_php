@@ -164,6 +164,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="1" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
         </div>
@@ -191,6 +194,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="2" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
         </div>
@@ -216,6 +222,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="3" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
         </div>
@@ -241,6 +250,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="4" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
         </div>
@@ -266,6 +278,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="5" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
         </div>
@@ -291,6 +306,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="6" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
         </div>
@@ -316,6 +334,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="7" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
         </div>
@@ -341,6 +362,9 @@ session_start();
                   New
                 </span>
               </div>
+                <div class="buy-button" data-product-id="8" data-product-type="Imprimante">
+                    <button onclick="addToCart(this)">Imprimante</button>
+                </div>
             </a>
           </div>
       </div>
@@ -448,6 +472,31 @@ session_start();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script src="js/custom.js"></script>
+  <script>
+      function addToCart(button) {
+          // Récupérer les informations du produit
+          var productId = button.parentElement.getAttribute('data-product-id');
+          var productType = button.parentElement.getAttribute('data-product-type');
+
+          // Appeler la fonction PHP pour enregistrer l'achat
+          addToCartPHP(productId, productType);
+      }
+
+      function addToCartPHP(productId, productType) {
+          // Utilisez AJAX pour appeler un script PHP qui enregistre l'achat
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'add_to_cart.php?product_id=' + productId + '&product_type=' + productType, true);
+
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                  // Gérer la réponse du serveur si nécessaire
+                  console.log(xhr.responseText);
+              }
+          }
+
+          xhr.send();
+      }
+  </script>
 
 </body>
 
