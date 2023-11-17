@@ -145,7 +145,6 @@ session_start();
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Cle/8.jpg" alt="">
               </div>
@@ -154,7 +153,6 @@ session_start();
                 Cle
                 </h6>
                 <h6>
-                
                   <span>
                     10,000 FCFA
                   </span>
@@ -168,13 +166,11 @@ session_start();
                 <div class="buy-button" data-product-id="40" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Cle/7.jpg" alt="">
               </div>
@@ -197,12 +193,10 @@ session_start();
                 <div class="buy-button" data-product-id="41" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Cle/6.jpg" alt="">
               </div>
@@ -225,12 +219,10 @@ session_start();
                 <div class="buy-button" data-product-id="42" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Cle/5.png" alt="">
               </div>
@@ -253,12 +245,10 @@ session_start();
                 <div class="buy-button" data-product-id="43" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Cle/4.jpg" alt="">
               </div>
@@ -267,7 +257,6 @@ session_start();
                 Cle
                 </h6>
                 <h6>
-                  
                   <span>
                     3750 FCFA
                   </span>
@@ -281,12 +270,10 @@ session_start();
                 <div class="buy-button" data-product-id="44" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Cle/3.jpg" alt="">
               </div>
@@ -295,7 +282,6 @@ session_start();
                 Cle
                 </h6>
                 <h6>
-                  
                   <span>
                     4000 FCFA
                   </span>
@@ -309,12 +295,10 @@ session_start();
                 <div class="buy-button" data-product-id="45" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Cle/2.jpg" alt="">
               </div>
@@ -323,7 +307,6 @@ session_start();
                 Cle
                 </h6>
                 <h6>
-                  
                   <span>
                     2280 FCFA
                   </span>
@@ -337,12 +320,10 @@ session_start();
                 <div class="buy-button" data-product-id="46" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
               <div class="img-box">
                 <img src="Cle/1.jpg" alt="">
               </div>
@@ -365,7 +346,6 @@ session_start();
                 <div class="buy-button" data-product-id="47" data-product-type="Cle">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
