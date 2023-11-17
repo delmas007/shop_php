@@ -1,16 +1,16 @@
 <?php
 session_start();
 // Vérifiez si l'utilisateur est connecté en vérifiant si la variable de session 'user_id' est définie
-if (isset($_SESSION["id"])) {
-    // L'utilisateur est connecté
-    $userId = $_SESSION["id"];
-
-    // Utilisez $userId comme bon vous semble (par exemple, pour afficher le contenu spécifique de l'utilisateur, effectuer des opérations en son nom, etc.)
-    echo "L'identifiant de l'utilisateur connecté est : $userId";
-} else {
-// L'utilisateur n'est pas connecté
-    echo "L'utilisateur n'est pas connecté.";
-}
+//if (isset($_SESSION["id"])) {
+//    // L'utilisateur est connecté
+//    $userId = $_SESSION["id"];
+//
+//    // Utilisez $userId comme bon vous semble (par exemple, pour afficher le contenu spécifique de l'utilisateur, effectuer des opérations en son nom, etc.)
+//    echo "L'identifiant de l'utilisateur connecté est : $userId";
+//} else {
+//// L'utilisateur n'est pas connecté
+//    echo "L'utilisateur n'est pas connecté.";
+//}
 ?>
 <!DOCTYPE html>
 <html>

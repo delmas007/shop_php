@@ -305,10 +305,11 @@ session_start();
                 <span>
                   New
                 </span>
-                  <div class="buy-button" data-product-id="61" data-product-type="Ordinateur">
-                      <button onclick="addToCart(this)">Commander</button>
-                  </div>
+
               </div>
+                <div class="buy-button" data-product-id="61" data-product-type="Ordinateur">
+                    <button onclick="addToCart(this)">Commander</button>
+                </div>
             </a>
           </div>
         </div>
@@ -342,7 +343,7 @@ session_start();
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
+            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/1.jpg" alt="">
               </div>
