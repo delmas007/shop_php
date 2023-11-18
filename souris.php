@@ -156,7 +156,6 @@ session_start();
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Souris/8.jpg" alt="">
               </div>
@@ -179,13 +178,11 @@ session_start();
                 <div class="buy-button" data-product-id="72" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Souris/7.jpg" alt="">
               </div>
@@ -208,12 +205,10 @@ session_start();
                 <div class="buy-button" data-product-id="73" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Souris/6.jpg" alt="">
               </div>
@@ -236,12 +231,10 @@ session_start();
                 <div class="buy-button" data-product-id="74" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Souris/5.jpg" alt="">
               </div>
@@ -264,12 +257,10 @@ session_start();
                 <div class="buy-button" data-product-id="75" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Souris/4.jpg" alt="">
               </div>
@@ -292,12 +283,10 @@ session_start();
                 <div class="buy-button" data-product-id="76" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Souris/3.jpg" alt="">
               </div>
@@ -320,12 +309,10 @@ session_start();
                 <div class="buy-button" data-product-id="77" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Souris/2.jpg" alt="">
               </div>
@@ -348,12 +335,10 @@ session_start();
                 <div class="buy-button" data-product-id="78" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
               <div class="img-box">
                 <img src="Souris/1.jpg" alt="">
               </div>
@@ -376,7 +361,6 @@ session_start();
                 <div class="buy-button" data-product-id="79" data-product-type="Souris">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
