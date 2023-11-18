@@ -144,8 +144,7 @@ session_start();
       </div>
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
+          <div class="box"
               <div class="img-box">
                 <img src="Imprimante/8.jpg" alt="">
               </div>
@@ -167,14 +166,12 @@ session_start();
                 <div class="buy-button" data-product-id="1" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
         </div>
 
 
               <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Imprimante/7.jpg" alt="">
               </div>
@@ -183,7 +180,6 @@ session_start();
                 Imprimante
                 </h6>
                 <h6>
-                  
                   <span>
                     200,900 FCFA
                   </span>
@@ -197,12 +193,10 @@ session_start();
                 <div class="buy-button" data-product-id="2" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Imprimante/6.jpg" alt="">
               </div>
@@ -211,7 +205,6 @@ session_start();
                 Imprimante
                 </h6>
                 <h6>
-                  
                   <span>
                     300,900 FCFA
                   </span>
@@ -225,12 +218,10 @@ session_start();
                 <div class="buy-button" data-product-id="3" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Imprimante/5.jpg" alt="">
               </div>
@@ -239,7 +230,6 @@ session_start();
                   Imprimante
                 </h6>
                 <h6>
-                  
                   <span>
                     569,900 FCFA
                   </span>
@@ -253,12 +243,10 @@ session_start();
                 <div class="buy-button" data-product-id="4" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Imprimante/4.jpg" alt="">
               </div>
@@ -267,7 +255,6 @@ session_start();
                 Imprimante
                 </h6>
                 <h6>
-                  
                   <span>
                     370,250 FCFA
                   </span>
@@ -281,12 +268,10 @@ session_start();
                 <div class="buy-button" data-product-id="5" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Imprimante/3.jpg" alt="">
               </div>
@@ -295,7 +280,6 @@ session_start();
                 Imprimante
                 </h6>
                 <h6>
-                  
                   <span>
                     150,000 FCFA
                   </span>
@@ -309,12 +293,10 @@ session_start();
                 <div class="buy-button" data-product-id="6" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Imprimante/2.jpg" alt="">
               </div>
@@ -323,7 +305,6 @@ session_start();
                 Imprimante
                 </h6>
                 <h6>
-                  
                   <span>
                     222,680 FCFA
                   </span>
@@ -337,12 +318,10 @@ session_start();
                 <div class="buy-button" data-product-id="7" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
               <div class="img-box">
                 <img src="Imprimante/1.jpg" alt="">
               </div>
@@ -365,7 +344,6 @@ session_start();
                 <div class="buy-button" data-product-id="8" data-product-type="Imprimante">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
