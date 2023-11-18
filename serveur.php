@@ -145,7 +145,6 @@ session_start();
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Serveur/8.jpg" alt="">
               </div>
@@ -168,13 +167,11 @@ session_start();
                 <div class="buy-button" data-product-id="64" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Serveur/7.jpg" alt="">
               </div>
@@ -197,12 +194,10 @@ session_start();
                 <div class="buy-button" data-product-id="65" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Serveur/6.jpg" alt="">
               </div>
@@ -225,12 +220,10 @@ session_start();
                 <div class="buy-button" data-product-id="66" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Serveur/5.png" alt="">
               </div>
@@ -253,12 +246,10 @@ session_start();
                 <div class="buy-button" data-product-id="67" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Serveur/4.png" alt="">
               </div>
@@ -267,7 +258,6 @@ session_start();
                 Serveur
                 </h6>
                 <h6>
-                  
                   <span>
                     370,250 FCFA
                   </span>
@@ -281,12 +271,10 @@ session_start();
                 <div class="buy-button" data-product-id="68" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Serveur/3.jpg" alt="">
               </div>
@@ -309,12 +297,10 @@ session_start();
                 <div class="buy-button" data-product-id="69" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Serveur/2.png" alt="">
               </div>
@@ -337,12 +323,10 @@ session_start();
                 <div class="buy-button" data-product-id="70" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
               <div class="img-box">
                 <img src="Serveur/1.jpg" alt="">
               </div>
@@ -365,7 +349,6 @@ session_start();
                 <div class="buy-button" data-product-id="71" data-product-type="Serveur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
