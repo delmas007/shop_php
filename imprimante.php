@@ -143,8 +143,9 @@ session_start();
         </h2>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box"
+
+              <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
               <div class="img-box">
                 <img src="Imprimante/8.jpg" alt="">
               </div>
@@ -168,33 +169,31 @@ session_start();
                 </div>
           </div>
         </div>
-
-
-              <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-              <div class="img-box">
-                <img src="Imprimante/7.jpg" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                Imprimante
-                </h6>
-                <h6>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="box">
+                  <div class="img-box">
+                      <img src="Imprimante/7.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                      <h6>
+                          Imprimante
+                      </h6>
+                      <h6>
                   <span>
                     200,900 FCFA
                   </span>
-                </h6>
-              </div>
-              <div class="new">
+                      </h6>
+                  </div>
+                  <div class="new">
                 <span>
                   New
                 </span>
+                  </div>
+                  <div class="buy-button" data-product-id="2" data-product-type="Imprimante">
+                      <button onclick="addToCart(this)">Imprimante</button>
+                  </div>
               </div>
-                <div class="buy-button" data-product-id="2" data-product-type="Imprimante">
-                    <button onclick="addToCart(this)">Imprimante</button>
-                </div>
           </div>
-        </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
               <div class="img-box">
