@@ -145,7 +145,6 @@ session_start();
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Fibre/8.jpg" alt="">
               </div>
@@ -154,7 +153,6 @@ session_start();
                 Fibre
                 </h6>
                 <h6>
-                
                   <span>
                     130,000 FCFA
                   </span>
@@ -168,13 +166,11 @@ session_start();
                 <div class="buy-button" data-product-id="9" data-product-type="Fibre">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Fibre/7.jpg" alt="">
               </div>
@@ -183,7 +179,6 @@ session_start();
                 Fibre
                 </h6>
                 <h6>
-                  
                   <span>
                     200,900 FCFA
                   </span>
@@ -197,12 +192,10 @@ session_start();
                 <div class="buy-button" data-product-id="10" data-product-type="Fibre">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Fibre/6.jpg" alt="">
               </div>
@@ -211,7 +204,6 @@ session_start();
                 Fibre
                 </h6>
                 <h6>
-                  
                   <span>
                     300,900 FCFA
                   </span>
@@ -225,7 +217,6 @@ session_start();
                 <div class="buy-button" data-product-id="11" data-product-type="Fibre">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
@@ -258,7 +249,6 @@ session_start();
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Fibre/4.jpg" alt="">
               </div>
@@ -267,7 +257,6 @@ session_start();
                 Fibre
                 </h6>
                 <h6>
-                  
                   <span>
                     370,250 FCFA
                   </span>
@@ -281,12 +270,10 @@ session_start();
                 <div class="buy-button" data-product-id="13" data-product-type="Fibre">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Fibre/3.jpg" alt="">
               </div>
@@ -309,7 +296,6 @@ session_start();
                 <div class="buy-button" data-product-id="14" data-product-type="Fibre">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
@@ -342,7 +328,6 @@ session_start();
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="shop.php">
               <div class="img-box">
                 <img src="Fibre/1.jpg" alt="">
               </div>
@@ -365,7 +350,6 @@ session_start();
                 <div class="buy-button" data-product-id="16" data-product-type="Fibre">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
