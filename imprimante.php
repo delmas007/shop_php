@@ -289,7 +289,7 @@ session_start();
                   New
                 </span>
               </div>
-                <div class="buy-button" data-product-id="6" data-product-type="Imprimante">
+                <div class="buy-button" data-product-id="6" data-product-type="Imprimant">
                     <button onclick="addToCart(this)">Imprimante</button>
                 </div>
           </div>
