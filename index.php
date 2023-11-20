@@ -107,7 +107,11 @@ session_start();
                   echo '<a href="deconnexion.php">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 <span>Déconnexion</span>
-              </a>';
+              </a>
+                <a href="#" id="cart-icon">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span id="cart-count">0</span>
+                </a>';
               } else {
                   echo '<a href="connexion/index.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -150,7 +154,7 @@ session_start();
                       <p>
                         ici nous vous offrons des materiels informatiques de tout genre et de toute taille de meilleurs qualites, a des prix raisonnables avec une garantie de 2 mois  .
                       </p>
-                      <a href="">
+                      <a href="contact.php">
                         Contactez nous
                       </a>
                     </div>
@@ -175,7 +179,7 @@ session_start();
                       <p>
                         ici nous vous offrons des materiels informatiques de tout genre et de toute taille de meilleurs qualites, a des prix raisonnables avec une garantie de 2 mois .
                       </p>
-                      <a href="">
+                      <a href="contact.php">
                         contactez nous
                       </a>
                     </div>
@@ -201,7 +205,7 @@ session_start();
                       <p>
                         ici nous vous offrons des materiels informatiques de tout genre et de toute taille de meilleurs qualites, a des prix raisonnables avec une garantie de 2 mois .
                       </p>
-                      <a href="">
+                      <a href="contact.php">
                         Contactez nous
                       </a>
                     </div>
