@@ -127,10 +127,11 @@ session_start();
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 <span>Déconnexion</span>
               </a>
-              <a href="#" id="cart-icon">
+              <a href="#" id="cart-icon" onclick="showOrderPopup()">
     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
     <span id="cart-count">0</span>
 </a>
+
 ';
                       } else {
                           echo '<a href="connexion/index.php">
@@ -474,6 +475,7 @@ session_start();
 
   </section>
 
+
   <!-- end info section -->
 
 
@@ -561,7 +563,47 @@ session_start();
           $('#modalMessage').html(message);
       }
 
+      function showOrderPopup() {
+          // Ajoutez ici le code pour récupérer et afficher les commandes de l'utilisateur
+          // Utilisez AJAX pour envoyer une requête PHP qui récupère les données depuis la base de données
+
+          // Exemple avec jQuery AJAX
+          $.ajax({
+              url: 'get_orders.php', // Remplacez 'get_orders.php' par le script PHP qui récupère les commandes
+              method: 'POST',
+              success: function(data) {
+                  // data contient les données renvoyées par le script PHP
+                  // Affichez les données dans le popup (par exemple, en utilisant une fenêtre modale Bootstrap)
+                  $('#orderPopupContent').html(data);
+                  $('#orderPopup').modal('show');
+              },
+              error: function() {
+                  alert('Une erreur s\'est produite lors de la récupération des commandes.');
+              }
+          });
+      }
+
   </script>
+<div class="modal" id="orderPopup" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered d-flex align-items-center justify-content-center" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Vos commandes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="orderPopupContent">
+                <!-- Le contenu des commandes sera inséré ici par JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Fenêtre modale Bootstrap -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -581,6 +623,26 @@ session_start();
         </div>
     </div>
 </div>
+<div class="modal" id="orderPopup" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered d-flex align-items-center justify-content-center" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Vos commandes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="orderPopupContent">
+                <!-- Le contenu des commandes sera inséré ici par JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 
