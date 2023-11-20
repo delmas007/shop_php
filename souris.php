@@ -478,20 +478,64 @@ session_start();
       }
 
       function addToCartPHP(productId, productType) {
-          // Utilisez AJAX pour appeler un script PHP qui enregistre l'achat
+          // Utiliser AJAX pour appeler un script PHP qui enregistre l'achat
           const xhr = new XMLHttpRequest();
           xhr.open('GET', 'add_to_cart.php?product_id=' + productId + '&product_type=' + productType, true);
 
-          xhr.onreadystatechange = function() {
-              if (xhr.readyState === 4 && xhr.status === 200) {
-                  // Gérer la réponse du serveur si nécessaire
-                  console.log(xhr.responseText);
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                      // Gérer la réponse du serveur si nécessaire
+                      console.log(xhr.responseText);
+                      showAlert('Votre commande a été prise en compte.');
+                  } else {
+                      showAlert('Une erreur s\'est produite lors du traitement de votre commande.');
+                  }
               }
           }
 
           xhr.send();
       }
+
+      function showAlert(message) {
+          // Afficher la fenêtre modale Bootstrap
+          $('#myModal').modal('show');
+
+          // Mettre le message dans la fenêtre modale
+          document.getElementById('modalMessage').innerHTML = message;
+      }
   </script>
+  <script>
+      function showAlert(message) {
+          // Afficher la fenêtre modale Bootstrap en utilisant jQuery
+          $('#myModal').modal('show');
+
+          // Mettre le message dans la fenêtre modale
+          $('#modalMessage').html(message);
+      }
+
+      // Exemple d'utilisation
+      // showAlert('Votre commande a été prise en compte.');
+  </script>
+  <!-- Fenêtre modale Bootstrap -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="myModalLabel">Alerte</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body" id="modalMessage">
+                  <!-- Le message sera placé ici par JavaScript -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
 </body>
 
