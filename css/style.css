@@ -5,6 +5,9 @@ body {
   color: #101010;
   background-color: #ffffff;
 }
+#myModal {
+  z-index: 9999;
+}
 
 .layout_padding {
   padding-top: 90px;
