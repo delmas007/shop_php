@@ -453,26 +453,28 @@ session_start();
   </script>
   <script src="js/custom.js"></script>
   <script>
+      var cartCount = 0;
+
       function addToCart(button) {
-          // Récupérer les informations du produit
           var productId = button.parentElement.getAttribute('data-product-id');
           var productType = button.parentElement.getAttribute('data-product-type');
 
-          // Appeler la fonction PHP pour enregistrer l'achat
           addToCartPHP(productId, productType);
       }
 
       function addToCartPHP(productId, productType) {
-          // Utiliser AJAX pour appeler un script PHP qui enregistre l'achat
           const xhr = new XMLHttpRequest();
           xhr.open('GET', 'add_to_cart.php?product_id=' + productId + '&product_type=' + productType, true);
 
           xhr.onreadystatechange = function () {
               if (xhr.readyState === 4) {
                   if (xhr.status === 200) {
-                      // Gérer la réponse du serveur si nécessaire
                       console.log(xhr.responseText);
                       showAlert('Votre commande a été prise en compte.');
+
+                      // Increment the cart count
+                      cartCount++;
+                      updateCartCount();
                   } else {
                       showAlert('Une erreur s\'est produite lors du traitement de votre commande.');
                   }
@@ -481,6 +483,12 @@ session_start();
 
           xhr.send();
       }
+
+      function updateCartCount() {
+          // Update the cart count displayed in the icon
+          document.getElementById('cart-count').innerHTML = cartCount;
+      }
+
 
       function showAlert(message) {
           // Afficher la fenêtre modale Bootstrap
@@ -496,6 +504,7 @@ session_start();
           // Mettre le message dans la fenêtre modale
           $('#modalMessage').html(message);
       }
+
   </script>
   <!-- Fenêtre modale Bootstrap -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
