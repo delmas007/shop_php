@@ -126,7 +126,12 @@ session_start();
                           echo '<a href="deconnexion.php">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 <span>Déconnexion</span>
-              </a>';
+              </a>
+              <a href="#" id="cart-icon">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <span id="cart-count">0</span>
+</a>
+';
                       } else {
                           echo '<a href="connexion/index.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -138,9 +143,6 @@ session_start();
               </a>';
                       }
                       ?>
-                      <a href="">
-                          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                      </a>
                       <form class="form-inline ">
                           <button class="btn nav_search-btn" type="submit">
                               <i class="fa fa-search" aria-hidden="true"></i>
@@ -482,26 +484,28 @@ session_start();
   <script src="js/custom.js"></script>
   <!-- Ajoutez ce script à la fin de votre page HTML ou dans l'entête -->
   <script>
+      var cartCount = 0;
+
       function addToCart(button) {
-          // Récupérer les informations du produit
           var productId = button.parentElement.getAttribute('data-product-id');
           var productType = button.parentElement.getAttribute('data-product-type');
 
-          // Appeler la fonction PHP pour enregistrer l'achat
           addToCartPHP(productId, productType);
       }
 
       function addToCartPHP(productId, productType) {
-          // Utiliser AJAX pour appeler un script PHP qui enregistre l'achat
           const xhr = new XMLHttpRequest();
           xhr.open('GET', 'add_to_cart.php?product_id=' + productId + '&product_type=' + productType, true);
 
           xhr.onreadystatechange = function () {
               if (xhr.readyState === 4) {
                   if (xhr.status === 200) {
-                      // Gérer la réponse du serveur si nécessaire
                       console.log(xhr.responseText);
                       showAlert('Votre commande a été prise en compte.');
+
+                      // Increment the cart count
+                      cartCount++;
+                      updateCartCount();
                   } else {
                       showAlert('Une erreur s\'est produite lors du traitement de votre commande.');
                   }
@@ -511,6 +515,12 @@ session_start();
           xhr.send();
       }
 
+      function updateCartCount() {
+          // Update the cart count displayed in the icon
+          document.getElementById('cart-count').innerHTML = cartCount;
+      }
+
+
       function showAlert(message) {
           // Afficher la fenêtre modale Bootstrap
           $('#myModal').modal('show');
@@ -518,19 +528,15 @@ session_start();
           // Mettre le message dans la fenêtre modale
           document.getElementById('modalMessage').innerHTML = message;
       }
+      function showAlert(message) {
+          // Afficher la fenêtre modale Bootstrap en utilisant jQuery
+          $('#myModal').modal('show');
+
+          // Mettre le message dans la fenêtre modale
+          $('#modalMessage').html(message);
+      }
+
   </script>
-<script>
-    function showAlert(message) {
-        // Afficher la fenêtre modale Bootstrap en utilisant jQuery
-        $('#myModal').modal('show');
-
-        // Mettre le message dans la fenêtre modale
-        $('#modalMessage').html(message);
-    }
-
-    // Exemple d'utilisation
-    // showAlert('Votre commande a été prise en compte.');
-</script>
 <!-- Fenêtre modale Bootstrap -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -557,5 +563,8 @@ session_start();
 
 </body>
 
-
+<script>document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount(); // Initialiser le nombre d'articles dans le panier
+    });
+</script>
 </html>

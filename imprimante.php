@@ -520,5 +520,8 @@ session_start();
   </div>
 
 </body>
-
+<script>document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount(); // Initialiser le nombre d'articles dans le panier
+    });
+</script>
 </html>

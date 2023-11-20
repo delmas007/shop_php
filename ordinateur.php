@@ -145,7 +145,6 @@ session_start();
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/8.jpg" alt="">
               </div>
@@ -168,13 +167,11 @@ session_start();
                 <div class="buy-button" data-product-id="56" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/7.jpg" alt="">
               </div>
@@ -197,12 +194,10 @@ session_start();
                 <div class="buy-button" data-product-id="57" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/6.jpg" alt="">
               </div>
@@ -225,12 +220,10 @@ session_start();
                 <div class="buy-button" data-product-id="58" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/5.jpg" alt="">
               </div>
@@ -253,12 +246,10 @@ session_start();
                 <div class="buy-button" data-product-id="59" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/4.jpg" alt="">
               </div>
@@ -267,7 +258,6 @@ session_start();
                 Ordinateur
                 </h6>
                 <h6>
-                  
                   <span>
                     370,250 FCFA
                   </span>
@@ -281,12 +271,10 @@ session_start();
                 <div class="buy-button" data-product-id="60" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/3.jpg" alt="">
               </div>
@@ -295,7 +283,6 @@ session_start();
                 Ordinateur
                 </h6>
                 <h6>
-                  
                   <span>
                     150,000 FCFA
                   </span>
@@ -310,12 +297,10 @@ session_start();
                 <div class="buy-button" data-product-id="61" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/2.jpg" alt="">
               </div>
@@ -338,12 +323,10 @@ session_start();
                 <div class="buy-button" data-product-id="62" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
               <div class="img-box">
                 <img src="Ordinateur/1.jpg" alt="">
               </div>
@@ -366,7 +349,6 @@ session_start();
                 <div class="buy-button" data-product-id="63" data-product-type="Ordinateur">
                     <button onclick="addToCart(this)">Commander</button>
                 </div>
-            </a>
           </div>
       </div>
       <div class="btn-box">
@@ -510,8 +492,6 @@ session_start();
           // Mettre le message dans la fenêtre modale
           document.getElementById('modalMessage').innerHTML = message;
       }
-  </script>
-  <script>
       function showAlert(message) {
           // Afficher la fenêtre modale Bootstrap en utilisant jQuery
           $('#myModal').modal('show');
@@ -519,9 +499,6 @@ session_start();
           // Mettre le message dans la fenêtre modale
           $('#modalMessage').html(message);
       }
-
-      // Exemple d'utilisation
-      // showAlert('Votre commande a été prise en compte.');
   </script>
   <!-- Fenêtre modale Bootstrap -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -544,5 +521,7 @@ session_start();
   </div>
 
 </body>
-
-</html>
+<script>document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount(); // Initialiser le nombre d'articles dans le panier
+    });
+</script></html>

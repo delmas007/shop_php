@@ -492,8 +492,6 @@ session_start();
           // Mettre le message dans la fenêtre modale
           document.getElementById('modalMessage').innerHTML = message;
       }
-  </script>
-  <script>
       function showAlert(message) {
           // Afficher la fenêtre modale Bootstrap en utilisant jQuery
           $('#myModal').modal('show');
@@ -501,9 +499,6 @@ session_start();
           // Mettre le message dans la fenêtre modale
           $('#modalMessage').html(message);
       }
-
-      // Exemple d'utilisation
-      // showAlert('Votre commande a été prise en compte.');
   </script>
   <!-- Fenêtre modale Bootstrap -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -526,5 +521,8 @@ session_start();
   </div>
 
 </body>
-
+<script>document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount(); // Initialiser le nombre d'articles dans le panier
+    });
+</script>
 </html>
