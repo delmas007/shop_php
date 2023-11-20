@@ -985,38 +985,84 @@ session_start();
   </script>
   <script src="js/custom.js"></script>
   <script>
-      const formulaire = document.getElementById('formulaire-contact');
-      const boutonSubmit = document.getElementById('bouton-submit');
+      var cartCount = 0;
 
-      formulaire.addEventListener('submit', (event) => {
-          event.preventDefault();
+      function addToCart(button) {
+          var productId = button.parentElement.getAttribute('data-product-id');
+          var productType = button.parentElement.getAttribute('data-product-type');
 
-          const formData = new FormData(formulaire);
+          addToCartPHP(productId, productType);
+      }
 
-          fetch('contacte.php', {
-              method: 'POST',
-              body: formData
-          })
-              .then(response => response.ok ? response.json() : Promise.reject('Réponse non valide'))
-              .then(data => {
-                  const alertDiv = document.getElementById('alert-message');
+      function addToCartPHP(productId, productType) {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'add_to_cart.php?product_id=' + productId + '&product_type=' + productType, true);
 
-                  if (data.success) {
-                      alertDiv.innerHTML = `<div class="alert alert-light">${data.message}</div>`;
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                      console.log(xhr.responseText);
+                      showAlert('Votre commande a été prise en compte.');
 
-                      // Efface les champs de saisie après une soumission réussie
-                      formulaire.reset();
+                      // Increment the cart count
+                      cartCount++;
+                      updateCartCount();
                   } else {
-                      alertDiv.innerHTML = `<div class="alert alert-danger">${data.message} Détails de l'erreur : ${data.error}</div>`;
+                      showAlert('Une erreur s\'est produite lors du traitement de votre commande.');
                   }
-              })
-              .catch(error => {
-                  console.error('Une erreur s\'est produite lors de la communication avec le serveur.', error);
-              });
+              }
+          }
+
+          xhr.send();
+      }
+
+      function updateCartCount() {
+          // Update the cart count displayed in the icon
+          document.getElementById('cart-count').innerHTML = cartCount;
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+          // Appeler la fonction pour récupérer le nombre de commandes
+          getCartCount();
+          echo
+          // Reste de votre code...
       });
 
+      // Nouvelle fonction pour récupérer le nombre de commandes via AJAX
+      function getCartCount() {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'get_cart_count.php', true);
 
-  </script>                                                                                                                                                                                                                                                                                                             
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                      // Mettez à jour le nombre d'articles affiché dans l'icône
+                      cartCount = parseInt(xhr.responseText);
+                      updateCartCount();
+                  } else {
+                      console.log('Une erreur s\'est produite lors de la récupération du nombre de commandes.');
+                  }
+              }
+          }
+
+          xhr.send();
+      }
+
+      function showAlert(message) {
+          // Afficher la fenêtre modale Bootstrap
+          $('#myModal').modal('show');
+
+          // Mettre le message dans la fenêtre modale
+          document.getElementById('modalMessage').innerHTML = message;
+      }
+      function showAlert(message) {
+          // Afficher la fenêtre modale Bootstrap en utilisant jQuery
+          $('#myModal').modal('show');
+
+          // Mettre le message dans la fenêtre modale
+          $('#modalMessage').html(message);
+      }
+
+  </script>
 
 </body>
 

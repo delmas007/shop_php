@@ -492,7 +492,32 @@ session_start();
           // Update the cart count displayed in the icon
           document.getElementById('cart-count').innerHTML = cartCount;
       }
+      document.addEventListener('DOMContentLoaded', function () {
+          // Appeler la fonction pour récupérer le nombre de commandes
+          getCartCount();
 
+          // Reste de votre code...
+      });
+
+      // Nouvelle fonction pour récupérer le nombre de commandes via AJAX
+      function getCartCount() {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'get_cart_count.php', true);
+
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                      // Mettez à jour le nombre d'articles affiché dans l'icône
+                      cartCount = parseInt(xhr.responseText);
+                      updateCartCount();
+                  } else {
+                      console.log('Une erreur s\'est produite lors de la récupération du nombre de commandes.');
+                  }
+              }
+          }
+
+          xhr.send();
+      }
 
       function showAlert(message) {
           // Afficher la fenêtre modale Bootstrap
@@ -531,8 +556,4 @@ session_start();
   </div>
 
 </body>
-<script>document.addEventListener('DOMContentLoaded', function () {
-        updateCartCount(); // Initialiser le nombre d'articles dans le panier
-    });
-</script>
 </html>
