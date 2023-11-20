@@ -123,16 +123,13 @@ session_start();
                   <div class="user_option">
                       <?php
                       if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-                          echo '<a href="deconnexion.php">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                <span>Déconnexion</span>
-              </a>
-              <a href="#" id="cart-icon" onclick="showOrderPopup()">
+                          echo '<a href="#" id="cart-icon" onclick="showOrderPopup()">
     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
     <span id="cart-count">0</span>
-</a>
-
-';
+</a><a href="deconnexion.php">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Déconnexion</span>
+              </a>';
                       } else {
                           echo '<a href="connexion/index.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -144,11 +141,6 @@ session_start();
               </a>';
                       }
                       ?>
-                      <form class="form-inline ">
-                          <button class="btn nav_search-btn" type="submit">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </button>
-                      </form>
                   </div>
               </div>
           </nav>

@@ -103,14 +103,13 @@ session_start();
                   <div class="user_option">
                       <?php
                       if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-                          echo '<a href="deconnexion.php">
+                          echo '<a href="#" id="cart-icon" onclick="showOrderPopup()">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <span id="cart-count">0</span>
+</a><a href="deconnexion.php">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 <span>Déconnexion</span>
-              </a>
-                <a href="#" id="cart-icon">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <span id="cart-count">0</span>
-                </a>';
+              </a>';
                       } else {
                           echo '<a href="connexion/index.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -122,14 +121,6 @@ session_start();
               </a>';
                       }
                       ?>
-                      <a href="">
-                          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                      </a>
-                      <form class="form-inline ">
-                          <button class="btn nav_search-btn" type="submit">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                          </button>
-                      </form>
                   </div>
               </div>
           </nav>
@@ -277,42 +268,141 @@ session_start();
   </script>
   <script src="js/custom.js"></script>
   <script>
-      const formulaire = document.getElementById('formulaire-contact');
-      const boutonSubmit = document.getElementById('bouton-submit');
+      var cartCount = 0;
 
-      formulaire.addEventListener('submit', (event) => {
-          event.preventDefault();
+      function addToCart(button) {
+          var productId = button.parentElement.getAttribute('data-product-id');
+          var productType = button.parentElement.getAttribute('data-product-type');
 
-          const formData = new FormData(formulaire);
+          addToCartPHP(productId, productType);
+      }
 
-          fetch('contacte.php', {
-              method: 'POST',
-              body: formData
-          })
-              .then(response => response.ok ? response.json() : Promise.reject('Réponse non valide'))
-              .then(data => {
-                  const alertDiv = document.getElementById('alert-message');
+      function addToCartPHP(productId, productType) {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'add_to_cart.php?product_id=' + productId + '&product_type=' + productType, true);
 
-                  if (data.success) {
-                      alertDiv.innerHTML = `<div class="alert alert-light">${data.message}</div>`;
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                      console.log(xhr.responseText);
+                      showAlert('Votre commande a été prise en compte.');
 
-                      // Efface les champs de saisie après une soumission réussie
-                      formulaire.reset();
+                      // Increment the cart count
+                      cartCount++;
+                      updateCartCount();
                   } else {
-                      alertDiv.innerHTML = `<div class="alert alert-danger">${data.message} Détails de l'erreur : ${data.error}</div>`;
+                      showAlert('Une erreur s\'est produite lors du traitement de votre commande.');
                   }
-              })
-              .catch(error => {
-                  console.error('Une erreur s\'est produite lors de la communication avec le serveur.', error);
-              });
+              }
+          }
+
+          xhr.send();
+      }
+
+      function updateCartCount() {
+          // Update the cart count displayed in the icon
+          document.getElementById('cart-count').innerHTML = cartCount;
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+          // Appeler la fonction pour récupérer le nombre de commandes
+          getCartCount();
+
+          // Reste de votre code...
       });
 
+      // Nouvelle fonction pour récupérer le nombre de commandes via AJAX
+      function getCartCount() {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'get_cart_count.php', true);
+
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                      // Mettez à jour le nombre d'articles affiché dans l'icône
+                      cartCount = parseInt(xhr.responseText);
+                      updateCartCount();
+                  } else {
+                      console.log('Une erreur s\'est produite lors de la récupération du nombre de commandes.');
+                  }
+              }
+          }
+
+          xhr.send();
+      }
+
+      function showAlert(message) {
+          // Afficher la fenêtre modale Bootstrap
+          $('#myModal').modal('show');
+
+          // Mettre le message dans la fenêtre modale
+          document.getElementById('modalMessage').innerHTML = message;
+      }
+      function showAlert(message) {
+          // Afficher la fenêtre modale Bootstrap en utilisant jQuery
+          $('#myModal').modal('show');
+
+          // Mettre le message dans la fenêtre modale
+          $('#modalMessage').html(message);
+      }
+      function showOrderPopup() {
+          // Ajoutez ici le code pour récupérer et afficher les commandes de l'utilisateur
+          // Utilisez AJAX pour envoyer une requête PHP qui récupère les données depuis la base de données
+
+          // Exemple avec jQuery AJAX
+          $.ajax({
+              url: 'get_orders.php', // Remplacez 'get_orders.php' par le script PHP qui récupère les commandes
+              method: 'POST',
+              success: function(data) {
+                  // data contient les données renvoyées par le script PHP
+                  // Affichez les données dans le popup (par exemple, en utilisant une fenêtre modale Bootstrap)
+                  $('#orderPopupContent').html(data);
+                  $('#orderPopup').modal('show');
+              },
+              error: function() {
+                  alert('Une erreur s\'est produite lors de la récupération des commandes.');
+              }
+          });
+      }
 
   </script>
+  <div class="modal" id="orderPopup" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered d-flex align-items-center justify-content-center" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Vos commandes</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body" id="orderPopupContent">
+                  <!-- Le contenu des commandes sera inséré ici par JavaScript -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Fenêtre modale Bootstrap -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="myModalLabel">Alerte</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body" id="modalMessage">
+                  <!-- Le message sera placé ici par JavaScript -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
 </body>
-<script>document.addEventListener('DOMContentLoaded', function () {
-        updateCartCount(); // Initialiser le nombre d'articles dans le panier
-    });
-</script>
+
 </html>
