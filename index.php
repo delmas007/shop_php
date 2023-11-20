@@ -778,25 +778,26 @@ session_start();
           
         </div>
         <div class="col-md-6 col-lg-5 px-0">
-          <form action="#">
-            <div>
-              <input type="text" placeholder="Nom" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" placeholder="Adresse" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <button>
-                Envoyer
-              </button>
-            </div>
-          </form>
+            <form id="formulaire-contact" action="contact.php" method="post">
+                <div>
+                    <input type="text" name="name" placeholder="Nom" required=""/>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email" pattern="[^ @]*@[^ @]*" required=""/>
+                </div>
+                <div>
+                    <input type="text" name="subject" placeholder="Adresse" required=""/>
+                </div>
+                <div>
+                    <input type="text" name="message" class="message-box" placeholder="Message" required=""/>
+                </div>
+                <div id="alert-message" class="text-center mt-4"></div>
+                <div class="d-flex ">
+                    <button type="submit" id="bouton-submit">
+                        Envoyer
+                    </button>
+                </div>
+            </form>
         </div>
       </div>
     </div>
@@ -983,6 +984,39 @@ session_start();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script src="js/custom.js"></script>
+  <script>
+      const formulaire = document.getElementById('formulaire-contact');
+      const boutonSubmit = document.getElementById('bouton-submit');
+
+      formulaire.addEventListener('submit', (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(formulaire);
+
+          fetch('contacte.php', {
+              method: 'POST',
+              body: formData
+          })
+              .then(response => response.ok ? response.json() : Promise.reject('Réponse non valide'))
+              .then(data => {
+                  const alertDiv = document.getElementById('alert-message');
+
+                  if (data.success) {
+                      alertDiv.innerHTML = `<div class="alert alert-light">${data.message}</div>`;
+
+                      // Efface les champs de saisie après une soumission réussie
+                      formulaire.reset();
+                  } else {
+                      alertDiv.innerHTML = `<div class="alert alert-danger">${data.message} Détails de l'erreur : ${data.error}</div>`;
+                  }
+              })
+              .catch(error => {
+                  console.error('Une erreur s\'est produite lors de la communication avec le serveur.', error);
+              });
+      });
+
+
+  </script>
 
 </body>
 
