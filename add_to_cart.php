@@ -27,6 +27,51 @@ if ($conn->query($sql) === TRUE) {
     echo "Erreur lors de l'enregistrement de l'achat : " . $conn->error;
 }
 
+
 // Fermer la connexion à la base de données
 $conn->close();
+
+function getCartCount() {
+    // Assurez-vous que la session a été démarrée
+    session_start();
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "vente";
+
+    // Vérifiez si l'utilisateur est connecté
+    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+        // Incluez votre configuration de base de données
+        include_once("config.php");
+
+        // Connexion à la base de données
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Vérifiez la connexion à la base de données
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Récupérez le nombre de commandes pour l'utilisateur actuel
+        $userId = $_SESSION["id"];
+        $sql = "SELECT COUNT(*) as count FROM commande WHERE id_u = $userId";
+        $result = $conn->query($sql);
+
+        // Vérifiez si la requête a réussi
+        if ($result) {
+            $row = $result->fetch_assoc();
+            echo $row["count"];
+        } else {
+            echo "0"; // En cas d'erreur, renvoyer 0
+        }
+
+        // Fermez la connexion à la base de données
+        $conn->close();
+    } else {
+        echo "0"; // Si l'utilisateur n'est pas connecté, renvoyer 0
+    }
+}
+
+// Appeler la nouvelle fonction
+getCartCount();
 ?>
