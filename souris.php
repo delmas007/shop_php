@@ -1,5 +1,6 @@
 <?php
 session_start();
+$userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
 // Vérifiez si l'utilisateur est connecté en vérifiant si la variable de session 'user_id' est définie
 //if (isset($_SESSION["id"])) {
 //    // L'utilisateur est connecté
