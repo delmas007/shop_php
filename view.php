@@ -7,10 +7,68 @@
           integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyTJAEiZnCeY6LZof++qJ49f8g6vjdh4u"
           crossorigin="anonymous">
     <title>User Details</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .card {
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .card-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .alert {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        .alert-warning {
+            background-color: #ffc107;
+            color: #856404;
+            border: 1px solid #ffc107;
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+            color: #fff;
+            border: 1px solid #dc3545;
+        }
+    </style>
 </head>
 <body>
-<div class="container mt-5">
-    <h2>User Details</h2>
+<div class="container">
+    <h2 class="mb-4">Utilisateur</h2>
     <?php
     // Replace with your database connection code
     $servername = "localhost";
@@ -37,18 +95,22 @@
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
 
-            echo "<p><strong>Username:</strong> {$user['username']}</p>";
-            echo "<p><strong>Email:</strong> {$user['email']}</p>";
-            echo "<p><strong>Role:</strong> {$user['role']}</p>";
-            echo "<p><strong>Address:</strong> {$user['adresse']}</p>";
-            echo "<p><strong>Phone:</strong> {$user['num_telephone']}</p>";
+            echo "<div class='card'>";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>Détails de l'utilisateur</h5>";
+            echo "<p class='card-text'><strong>Username:</strong> {$user['username']}</p>";
+            echo "<p class='card-text'><strong>Email:</strong> {$user['email']}</p>";
+            echo "<p class='card-text'><strong>Address:</strong> {$user['adresse']}</p>";
+            echo "<p class='card-text'><strong>Phone:</strong> {$user['num_telephone']}</p>";
+            echo "</div>";
+            echo "</div>";
         } else {
-            echo "<p>No user details found</p>";
+            echo "<div class='alert alert-warning'>No user details found</div>";
         }
 
         $stmt->close();
     } else {
-        echo "<p>User ID not provided</p>";
+        echo "<div class='alert alert-danger'>User ID not provided</div>";
     }
 
     $conn->close();

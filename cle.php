@@ -159,7 +159,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="40" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
         </div>
@@ -186,7 +193,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="41" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
         </div>
@@ -212,7 +226,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="42" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
         </div>
@@ -238,7 +259,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="43" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
         </div>
@@ -263,7 +291,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="44" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
         </div>
@@ -288,7 +323,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="45" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
         </div>
@@ -313,7 +355,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="46" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
         </div>
@@ -339,7 +388,14 @@ session_start();
                 </span>
               </div>
                 <div class="buy-button" data-product-id="47" data-product-type="Cle">
-                    <button onclick="addToCart(this)">Commander</button>
+                    <?php
+                    // Vérifier si l'utilisateur est connecté
+                    if ($userLoggedIn) {
+                        echo '<button onclick="addToCart(this)">Commander</button>';
+                    } else {
+                        echo '<button disabled>Connectez-vous pour commander</button>';
+                    }
+                    ?>
                 </div>
           </div>
       </div>
