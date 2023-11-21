@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $sql = "SELECT id_user, username, mot_de_passe FROM utilisateur WHERE username = ?";
+    $sql = "SELECT id_user, username, mot_de_passe, role FROM utilisateur WHERE username = ?";
 
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->bind_param("s", $param_username);
@@ -31,16 +31,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Vérifiez si l'utilisateur existe, si oui, vérifiez le mot de passe
             if ($stmt->num_rows == 1) {
-                $stmt->bind_result($id, $username, $hashed_password);
+                $stmt->bind_result($id, $username, $hashed_password, $role);
                 if ($stmt->fetch()) {
                     if (password_verify($password, $hashed_password)) {
                         // Le mot de passe est correct, démarrer une nouvelle session
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
                         $_SESSION["username"] = $username;
+                        $_SESSION["role"] = $role; // Stocke le rôle dans la session
 
-                        // Redirigez l'utilisateur vers la page de bienvenue
-                        header("location: ../index.php");
+                        // Redirigez l'utilisateur en fonction du rôle
+                        if ($_SESSION["role"] == 1) {
+                            header("location: ../admin.php");
+                        } else {
+                            header("location: ../index.php");
+                        }
+                        exit;
                     } else {
                         // Le mot de passe n'est pas valide
                         $error = "Le mot de passe que vous avez entré n'est pas valide.";
