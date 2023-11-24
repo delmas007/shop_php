@@ -70,7 +70,7 @@ session_start();
             </li>
             <li class="nav-item">
               <a class="nav-link" href="fibre.php">
-                Fibre
+                Fibr
               </a>
             </li>
             <li class="nav-item">
