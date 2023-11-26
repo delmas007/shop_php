@@ -393,7 +393,15 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                 </h6>
                 <h6>
                 
-
+                  <span>
+                    2900 FCFA
+                  </span>
+                </h6>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
               </div>
                 <div class="buy-button" data-product-id="79" data-product-type="Souris">
                     <?php
