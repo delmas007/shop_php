@@ -364,37 +364,7 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                 </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-              <div class="img-box">
-                <img src="Imprimante/1.jpg" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                Imprimante
-                </h6>
-                <h6>
-                
-                  <span>
-                    292,900 FCFA
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-                <div class="buy-button" data-product-id="8" data-product-type="Imprimante">
-                    <?php
-                    // Vérifier si l'utilisateur est connecté
-                    if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
-                    } else {
-                        echo '<button disabled>Connectez-vous pour commander</button>';
-                    }
-                    ?>
-                </div>
+
           </div>
       </div>
       <div class="btn-box">
