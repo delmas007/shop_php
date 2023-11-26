@@ -94,11 +94,7 @@ session_start();
               </a>
             </li>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="temoignage.php">
-                Temoignage
-              </a>
-            </li>
+
             
           </ul>
             <div class="user_option">
