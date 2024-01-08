@@ -374,7 +374,7 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                 Imprimante
                 </h6>
                 <h6>
-                
+
                   <span>
                     292,900 FCFA
                   </span>
