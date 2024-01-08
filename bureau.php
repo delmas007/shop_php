@@ -30,6 +30,15 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+    <style>
+        .circle-icon {
+            width: 40px; /* Ajustez la taille en fonction de vos besoins */
+            height: 40px;
+            border-radius: 50%;
+            margin: 5px; /* Ajoutez une marge entre les images */
+        }
+
+    </style>
 </head>
 
 <body>
@@ -187,7 +196,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
@@ -221,7 +233,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
@@ -254,7 +269,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
@@ -287,7 +305,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
@@ -320,7 +341,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
@@ -353,7 +377,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
@@ -386,7 +413,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
@@ -419,7 +449,10 @@ $userLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
                     <?php
                     // Vérifier si l'utilisateur est connecté
                     if ($userLoggedIn) {
-                        echo '<button onclick="addToCart(this)">Commander</button>';
+                        echo '<button onclick="addToCart(this)"><img class="circle-icon" src="1200px-MTN_Logo.svg.png" alt="">
+                    <img class="circle-icon" src="58429064a6515b1e0ad75aba.png" alt="">
+                    <img class="circle-icon" src="Moov_Africa_logo.png" alt="">
+                    <img class="circle-icon" src="wave.png" alt=""></button>';
                     } else {
                         echo '<button disabled>Connectez-vous pour commander</button>';
                     }
